@@ -1,0 +1,25 @@
+{
+    "type": "object",
+    "properties": {
+      "socialAccounts": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "platformLink": {
+              "type": "string",
+              "format": "uri"
+            },
+            "platformName": {
+              "type": "string"
+            }
+          },
+          "required": ["id", "platformLink", "platformName"]
+        }
+      }
+    },
+    "required": ["socialAccounts"]
+  }

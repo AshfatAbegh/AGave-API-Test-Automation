@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "Cardeditno": {
+        "type": "string"
+      },
+      "LinkUrl": {
+        "type": "string",
+        "format": "uri"
+      },
+      "ProcessDate": {
+        "type": "string",
+        "pattern": "^\\d{14}$"
+      },
+      "WarnList": {
+        "type": ["null", "array"]
+      }
+    },
+    "required": ["Cardeditno", "LinkUrl", "ProcessDate", "WarnList"],
+    "additionalProperties": false
+  }

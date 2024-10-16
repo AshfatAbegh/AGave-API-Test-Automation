@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "bankName": {
+      "type": "string"
+    },
+    "branchOffice": {
+      "type": "string"
+    },
+    "branchCode": {
+      "type": "string",
+      "pattern": "^[0-9]{5}$"
+    },
+    "deposit": {
+      "type": "string"
+    },
+    "accountNumber": {
+      "type": "string",
+      "pattern": "^[0-9]{15}$"
+    },
+    "accountName": {
+      "type": "string"
+    }
+  },
+  "required": ["id", "bankName", "branchOffice", "branchCode", "deposit", "accountNumber", "accountName"],
+  "additionalProperties": false
+}

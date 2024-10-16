@@ -1,0 +1,33 @@
+{
+  "type": "object",
+  "properties": {
+    "sellerReviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5
+          },
+          "comment": {
+            "type": "string"
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": ["id", "title", "rating", "comment", "createdAt"]
+      }
+    }
+  },
+  "required": ["sellerReviews"]
+}

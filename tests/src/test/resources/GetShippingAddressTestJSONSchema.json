@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "shippingAddressDetails": {
+      "type": "object",
+      "properties": {
+        "shippingAddressPostalCode": {
+          "type": "string"
+        },
+        "shippingAddressPrefectures": {
+          "type": "string"
+        },
+        "shippingAddressCityStreetAddress": {
+          "type": "string"
+        },
+        "shippingAddressBuildingNameAndRoomNumber": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "shippingAddressPostalCode",
+        "shippingAddressPrefectures",
+        "shippingAddressCityStreetAddress",
+        "shippingAddressBuildingNameAndRoomNumber"
+      ]
+    },
+    "shippingAddress": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "shippingAddressDetails",
+    "shippingAddress"
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer" },
+    "orderId": { "type": "string" },
+    "name": { "type": "string" },
+    "price": { "type": "number" },
+    "supplementaryInformation": { "type": "string" },
+    "bredingMethod": { "type": "string" },
+    "acquisitionRouteDescription": { "type": "string" },
+    "status": { "type": "string" },
+    "seller": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "profileImage": { "type": "string", "format": "uri" },
+        "rating": { "type": "number" },
+        "status": { "type": "integer" },
+        "area": { "type": "string" },
+        "reviewCount": { "type": "integer" }
+      },
+      "required": ["id", "name", "profileImage", "rating", "status", "area", "reviewCount"]
+    },
+    "buyer": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "profileImage": { "type": "string", "format": "uri" },
+        "rating": { "type": "number" },
+        "reviewCount": { "type": "integer" }
+      },
+      "required": ["id", "name", "profileImage", "rating", "reviewCount"]
+    },
+    "hashTags": { "type": "array" },
+    "treeSpecies": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "required": ["key", "value"]
+    },
+    "countryOfOrigin": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "required": ["key", "value"]
+    },
+    "size": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "required": ["key", "value"]
+    },
+    "width": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "required": ["key", "value"]
+    },
+    "conditionAtTheTimeOfShipment": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "required": ["key", "value"]
+    },
+    "shippingMethod": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "required": ["key", "value"]
+    },
+    "shippingOrigin": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "required": ["key", "value"]
+    },
+    "shippingCost": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "required": ["key", "value"]
+    },
+    "daysOfDelivery": {
+      "type": "object",
+      "properties": {
+        "key": { "type": "string" },
+        "value": { "type": "string" }
+      },
+      "required": ["key", "value"]
+    },
+    "images": { "type": "array" },
+    "purchaseDateAt": { "type": "string", "format": "date-time" },
+    "shippingProcedureDateAt": { "type": "string", "format": "date-time" },
+    "likeCount": { "type": "integer" },
+    "likedByUser": { "type": "boolean" },
+    "document": { "type": ["object", "null"] },
+    "shippingAddress": {
+      "type": "object",
+      "properties": {
+        "shippingAddress": {
+          "type": "object",
+          "properties": {
+            "postalCode": { "type": "string" },
+            "prefectures": { "type": "string" },
+            "streetAddress": { "type": "string" },
+            "buildingNameAndRoomNumber": { "type": "string" }
+          },
+          "required": ["postalCode", "prefectures", "streetAddress", "buildingNameAndRoomNumber"]
+        },
+        "fullShippingAddress": { "type": "string" }
+      },
+      "required": ["shippingAddress", "fullShippingAddress"]
+    },
+    "sellerSurvey": { "type": "boolean" },
+    "buyerSurvey": { "type": "boolean" }
+  },
+  "required": [
+    "id", "orderId", "name", "price", "supplementaryInformation", "bredingMethod",
+    "acquisitionRouteDescription", "status", "seller", "buyer", "hashTags",
+    "treeSpecies", "countryOfOrigin", "size", "width", "conditionAtTheTimeOfShipment",
+    "shippingMethod", "shippingOrigin", "shippingCost", "daysOfDelivery", "images",
+    "purchaseDateAt", "shippingProcedureDateAt", "likeCount", "likedByUser",
+    "document", "shippingAddress", "sellerSurvey", "buyerSurvey"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "sellerList": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sellerId": {
+            "type": "integer"
+          },
+          "userProfilePictureUrl": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "number"
+          },
+          "reviewCount": {
+            "type": "integer"
+          },
+          "treeSpecies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "value"
+              ]
+            }
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sellerId",
+          "userProfilePictureUrl",
+          "rating",
+          "reviewCount",
+          "treeSpecies",
+          "name"
+        ]
+      }
+    },
+    "totalItems": {
+      "type": "integer"
+    },
+    "totalPages": {
+      "type": "integer"
+    },
+    "currentPage": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "sellerList",
+    "totalItems",
+    "totalPages",
+    "currentPage"
+  ]
+}

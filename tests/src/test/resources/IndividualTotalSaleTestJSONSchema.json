@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "totalMoney": {
+      "type": "number"
+    },
+    "totalSoldProducts": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "totalLikes": {
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": ["totalMoney", "totalSoldProducts", "totalLikes"],
+  "additionalProperties": false
+}

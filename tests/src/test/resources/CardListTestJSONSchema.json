@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "expire": {
+            "type": "string",
+            "pattern": "^\\d{2}/\\d{2}$"
+          },
+          "defaultFlag": {
+            "type": "string",
+            "enum": ["0", "1"]
+          },
+          "cardName": {
+            "type": "string"
+          },
+          "holderName": {
+            "type": "string"
+          },
+          "deleteFlag": {
+            "type": "string",
+            "enum": ["0", "1"]
+          },
+          "cardNo": {
+            "type": "string",
+            "pattern": "^\\*{12}\\d{3}$"
+          },
+          "cardSeq": {
+            "type": "string",
+            "pattern": "^\\d+$"
+          }
+        },
+        "required": ["expire", "defaultFlag", "cardName", "holderName", "deleteFlag", "cardNo", "cardSeq"],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": ["data"],
+  "additionalProperties": false
+}

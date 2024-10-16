@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "blockedData": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer"
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "userProfilePictureUrl": {
+            "type": "string"
+          },
+          "rating": {
+            "type": "number"
+          },
+          "reviewCount": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "userId",
+          "fullName",
+          "userProfilePictureUrl",
+          "rating",
+          "reviewCount"
+        ]
+      }
+    }
+  },
+  "required": [
+    "blockedData"
+  ]
+}

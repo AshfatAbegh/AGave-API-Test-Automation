@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "productComments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "commenterId": {
+            "type": "integer"
+          },
+          "commenterReadableId": {
+            "type": "string"
+          },
+          "commenterName": {
+            "type": "string"
+          },
+          "commenterImage": {
+            "type": "string",
+            "format": "uri"
+          },
+          "comment": {
+            "type": "string"
+          },
+          "publishAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "required": [
+          "id",
+          "commenterId",
+          "commenterReadableId",
+          "commenterName",
+          "commenterImage",
+          "comment",
+          "publishAt"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["productComments"],
+  "additionalProperties": false
+}

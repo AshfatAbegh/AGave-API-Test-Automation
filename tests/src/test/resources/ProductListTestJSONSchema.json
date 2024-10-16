@@ -1,0 +1,67 @@
+{
+  "type": "object",
+  "properties": {
+    "sellerProducts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "producerName": {
+            "type": "string"
+          },
+          "publishedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "productImage": {
+            "type": ["string", "null"],
+            "format": "uri"
+          },
+          "status": {
+            "type": "string"
+          },
+          "likeCount": {
+            "type": "integer"
+          },
+          "likedByUser": {
+            "type": "boolean"
+          },
+          "species": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": ["key", "value"]
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "price",
+          "producerName",
+          "publishedAt",
+          "productImage",
+          "status",
+          "likeCount",
+          "likedByUser",
+          "species"
+        ]
+      }
+    }
+  },
+  "required": ["sellerProducts"]
+}

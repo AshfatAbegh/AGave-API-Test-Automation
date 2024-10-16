@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer" },
+    "readableId": { "type": "string" },
+    "profilePictureUrl": { "type": "string", "format": "uri" },
+    "nickName": { "type": "string" },
+    "selfIntroductoryStatement": { "type": "string" },
+    "phoneNumber": { "type": "string" },
+    "phoneVerifiedAt": { "type": "string", "format": "date-time" },
+    "surNameKanji": { "type": "string" },
+    "firstNameKanji": { "type": "string" },
+    "surNameFurigana": { "type": "string" },
+    "firstNameFurigana": { "type": "string" },
+    "dateOfBirth": { "type": "string", "pattern": "^\\d{2}/\\d{2}/\\d{4}$" },
+    "postalCode": { "type": "string" },
+    "cityStreetAddress": { "type": "string" },
+    "buildingNameAndRoomNumber": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "updatedDateAt": { "type": "string", "format": "date-time" },
+    "createdDateAt": { "type": "string", "format": "date-time" },
+    "userStatus": { "type": "string" },
+    "rating": { "type": "number" },
+    "reviewCount": { "type": "integer" },
+    "documents": { "type": ["array", "null"], "items": { "type": "object" } },
+    "socialLinks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "platformLink": { "type": "string", "format": "uri" },
+          "platformName": { "type": "string" }
+        },
+        "required": ["id", "platformLink", "platformName"]
+      }
+    },
+    "prefectures": { "type": "string" }
+  },
+  "required": [
+    "id",
+    "readableId",
+    "profilePictureUrl",
+    "nickName",
+    "phoneNumber",
+    "phoneVerifiedAt",
+    "surNameKanji",
+    "firstNameKanji",
+    "surNameFurigana",
+    "firstNameFurigana",
+    "dateOfBirth",
+    "postalCode",
+    "cityStreetAddress",
+    "buildingNameAndRoomNumber",
+    "email",
+    "updatedDateAt",
+    "createdDateAt",
+    "userStatus",
+    "rating",
+    "reviewCount",
+    "socialLinks",
+    "prefectures"
+  ]
+}

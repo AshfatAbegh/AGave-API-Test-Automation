@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "sellerProducts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "producerName": {
+            "type": "string"
+          },
+          "publishedAt": {
+            "type": ["null", "string"],
+            "format": "date-time"
+          },
+          "productImage": {
+            "type": ["null", "string"]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["PUBLISHED"]
+          },
+          "purchaserName": {
+            "type": "string"
+          },
+          "purchaserAddress": {
+            "type": "string"
+          },
+          "purchasedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sellerSurvey": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "price",
+          "producerName",
+          "status",
+          "purchaserName",
+          "purchaserAddress",
+          "purchasedAt",
+          "sellerSurvey"
+        ]
+      }
+    }
+  },
+  "required": ["sellerProducts"]
+}

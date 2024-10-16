@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "withdrawRequestData": {
+      "type": "object",
+      "properties": {
+        "withdrawId": {
+          "type": "integer"
+        },
+        "status": {
+          "type": "string"
+        },
+        "requestAmount": {
+          "type": "number"
+        }
+      },
+      "required": ["withdrawId", "status", "requestAmount"],
+      "additionalProperties": false
+    },
+    "totalAmount": {
+      "type": "number"
+    }
+  },
+  "required": ["withdrawRequestData", "totalAmount"],
+  "additionalProperties": false
+}

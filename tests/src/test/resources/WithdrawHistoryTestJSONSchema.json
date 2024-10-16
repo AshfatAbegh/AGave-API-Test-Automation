@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "withdrawData": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "transactionId": {
+              "type": "string",
+              "pattern": "^W[0-9]+I[0-9]+$"
+            },
+            "amount": {
+              "type": "number",
+              "minimum": 0
+            },
+            "dateOfTransfer": {
+              "type": "string",
+              "format": "date-time"
+            }
+          },
+          "required": ["transactionId", "amount", "dateOfTransfer"],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": ["withdrawData"],
+    "additionalProperties": false
+  }

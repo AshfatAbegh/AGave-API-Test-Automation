@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "buyerId": {
+      "type": "integer"
+    },
+    "userProfilePictureUrl": {
+      "type": "string"
+    },
+    "nickName": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number"
+    },
+    "reviewCount": {
+      "type": "integer"
+    },
+    "identified": {
+      "type": "boolean"
+    },
+    "selfIntroductoryStatement": {
+      "type": "string"
+    },
+    "platformName": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "buyerId",
+    "userProfilePictureUrl",
+    "nickName",
+    "rating",
+    "reviewCount",
+    "identified",
+    "selfIntroductoryStatement",
+    "platformName"
+  ]
+}
