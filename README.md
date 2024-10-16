@@ -1,4 +1,4 @@
-# Agave-API-Test-Automation-Using-Rest-Assured
+# Agave-API-Test-Automation
  Agave is a Japanese company specializing in providing a wide selection of small houseplants through a mobile application, complemented by an admin portal for management purposes. Initially, it showcased its botanical wonders on Instagram. However, with the overwhelming demand for its exquisite plants, Agave aspired to establish and manage a dedicated sales platform. 
 
 # This repository is dedicated to API test automation using RestAssured, providing comprehensive coverage of all HTTP methods—GET, POST, PUT, DELETE—for API testing. The framework is built with a focus on scalability, efficiency, and thorough validation.
